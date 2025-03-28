@@ -1,0 +1,23 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import linregress
+
+# Given data
+Vout = [-0.9, -0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7, 0.9]
+Vin = [14.20, 14.24, 10.82, 6.49, 2.05, -1.95, -6.33, -10.86, -13.57, -13.60]
+
+
+# Plotting Vin as a function of Vout with trendline
+plt.figure(figsize=(8, 6))
+
+# Scatter plot with connecting lines
+plt.plot(Vout, Vin, '-o', color='blue', label='Vout vs Vin Data')
+
+plt.title('Vout as a Function of Vin')
+plt.xlabel('Vin')
+plt.ylabel('Vout')
+plt.grid(True)
+plt.axhline(0, color='black', linewidth=0.5)
+plt.axvline(0, color='black', linewidth=0.5)
+plt.legend()
+plt.show()
